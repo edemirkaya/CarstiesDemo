@@ -49,7 +49,7 @@ namespace IdentityService.Pages.Register
                     EmailConfirmed = true
                 };
 
-                var result = await _userManager.CreateAsync(user);
+                var result = await _userManager.CreateAsync(user,Input.Password);
 
                 if (result.Succeeded)
                 {
